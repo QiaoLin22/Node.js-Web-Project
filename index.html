@@ -1,14 +1,317 @@
 <!DOCTYPE html>
-<html lang = "en">
-    <head>
-        <meta charset = "utf-8">
-        <title> Home | Qiao Lin's page</title>
-    </head>
-    <body>
-        <h1>Qiao Lin</h1>
-        <h2>
-            share some learning experience
-        </h2>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
 
-    </body>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/toc-tree.css">
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/pagination.css">
+</head>
+<body>
+
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position: absolute; width: 0; height: 0" id="__SVG_SPRITE_NODE__">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 5.249" id="angle-down">
+            <path fill="currentColor" d="M0 .75C0 .67.03.6.09.54L.54.09C.6.03.67 0 .75 0s.146.03.207.09L4.5 3.634 8.044.09c.06-.06.13-.09.207-.09s.148.03.21.09l.45.45c.06.06.09.13.09.21s-.03.146-.09.206L4.708 5.158c-.06.06-.13.09-.208.09s-.147-.03-.208-.09L.09.956C.03.896 0 .826 0 .75z">
+            </path>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 19.998 20" id="search">
+            <path fill="currentColor" d="M19.998,18.426l-4.386-4.374c1.156-1.477,1.848-3.332,1.848-5.346c0-4.8-3.917-8.706-8.73-8.706  C3.917,0,0,3.906,0,8.706c0,4.8,3.917,8.706,8.729,8.706c1.991,0,3.827-0.669,5.297-1.792L18.42,20L19.998,18.426z M8.729,15.186  c-3.583,0-6.498-2.907-6.498-6.48c0-3.573,2.915-6.479,6.498-6.479c3.583,0,6.498,2.906,6.498,6.479  C15.228,12.279,12.313,15.186,8.729,15.186z"></path>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 18.414 18.415" id="close">
+            <g>
+                <path d="M1.414,18.415L0,17L17,0l1.414,1.415L1.414,18.415z"></path>
+                <path d="M17,18.415L18.414,17l-17-17L0,1.415L17,18.415z"></path>
+            </g>
+        </symbol>
+    </svg>
+
+    <div class="layout">
+        <div class="header">
+            <div class="content">
+                <div class="left-bar">
+                    <h3>江东家具城后台控制台</h3>
+
+                    <div class="menu">
+                        <li><a href="javascript:void(0)" class="active">安全</a></li>
+                        <li><a href="javascript:void(0)">商务</a></li>
+                    </div>
+
+                </div>
+
+
+                <div class="account-info">
+                    <div>yoyoyosiyu@126.com</div>
+                    <div class="anchor" style="">
+                        <div>
+                            <svg viewBox="4 4 16 16" width="100%" height="100%">
+                                <path d="M7.41,8.59L12,13.17l4.59-4.58L18,10l-6,6l-6-6L7.41,8.59z"></path>
+                                <path fill="none" d="M0,0h24v24H0V0z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="app">
+            <div class="app__nav">
+                <div class="nav">
+
+                    <ul class="toc-tree nav__toc">
+                        <li class="toc-tree__node toc-tree__node--level_0">
+                            <div class="toc-tree__title-wrapper">
+                                <a class="toc-tree__title toc-tree__title--have-childs toc-tree__title--link">账户管理</a>
+                                <div class="toc-tree__expander">
+                                    <svg class="toc-tree__expander-glyph">
+                                        <use xlink:href="#angle-down"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="toc-tree__node toc-tree__node--level_0">
+                            <div class="toc-tree__title-wrapper">
+                                <a class="toc-tree__title toc-tree__title--have-childs toc-tree__title--link">权限分配</a>
+                                <div class="toc-tree__expander">
+                                    <svg class="toc-tree__expander-glyph">
+                                        <use xlink:href="#angle-down"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="app__main">
+
+                <div class="bread_crumbs">安全 > 账号管理 > 列表</div>
+
+                <div class="workspace_wrapper">
+                    <div class="workspace">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th width="10">
+                                        <input type="checkbox" class="ng-pristine ng-valid">
+                                    </th>
+                                    <th>ID</th>
+                                    <th>账号</th>
+                                    <th>昵称</th>
+                                    <th>邮箱</th>
+                                    <th>有效</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td width="10">
+                                        <input type="checkbox" class="ng-pristine ng-valid">
+                                    </td>
+                                    <td>1</td>
+                                    <td>yoyoyosiyu</td>
+                                    <td>房辉家具</td>
+                                    <td>yoyoyosiyu@126.com</td>
+                                    <td>是</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td><input type="checkbox" class=""></td>
+                                    <td colspan="5">
+                                        <div class="float-right">
+                                            <div class="pagination-info">
+                                                <span >共有3条</span>, <span >每页显示：15条</span>
+                                                <span class="hide">每页显示：<select class=""><option value="?" selected="selected"></option></select>条</span>
+                                            </div>
+                                            <ul class="pagination">
+                                                <!-- ngRepeat: page in pages -->
+                                                <li class="disabled">
+                                                    <a href="javascript:void(0)" >«</a>
+                                                </li>
+                                                <!-- end ngRepeat: page in pages -->
+                                                <li class="disabled">
+                                                    <a href="javascript:void(0)">‹</a>
+                                                </li>
+                                                <!-- end ngRepeat: page in pages -->
+                                                <li class="active">
+                                                    <a href="javascript:void(0)">1</a>
+                                                </li>
+                                                <!-- end ngRepeat: page in pages -->
+                                                <li class="">
+                                                    <a href="javascript:void(0)">2</a>
+                                                </li>
+                                                <!-- end ngRepeat: page in pages -->
+                                                <li class="disabled">
+                                                    <a href="javascript:void(0)">›</a>
+                                                </li>
+                                                <!-- end ngRepeat: page in pages -->
+                                                <li class="disabled">
+                                                    <a href="javascript:void(0)">»</a>
+                                                </li>
+                                                <!-- end ngRepeat: page in pages -->
+                                            </ul>
+                                            <span style="padding-left: 15px;padding-right: 15px" class="">
+                                                <input type="text" class="form-control" value-min="1" value-max="32" style="width: 40px; display: inline-block; padding-right: 5px">
+                                                <button class="btn btn-default" style="padding: 8px 8px;margin-left: 6px">GO</button>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        *, *:before, *:after {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        body {
+            color: #666;
+        }
+        body, html {
+            height: 100%;
+            font-size: 16px;
+        }
+        .layout {
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+        }
+        .header {
+            background-color: #fff;
+            -webkit-box-shadow: 0 2px 6px 0 rgba(0,0,0,0.12);
+            box-shadow: 0 2px 6px 0 rgba(0,0,0,0.12);
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            left: 0;
+            padding-left: -webkit-calc(100vw - 100%);
+            padding-left: calc(100vw - 100%);
+            /*position: fixed;*/
+            top: 0;
+            width: 100%;
+            z-index: 1150;
+        }
+        .app {
+            flex: 1;
+            position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .app__nav {
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 272px;
+            background: #fafafa;
+        }
+        .app__main {
+            flex: 1;
+            overflow-x: hidden;
+            overflow-y: auto;
+            margin-left: 272px;
+        }
+        .header .content {
+            margin: 0 32px;
+            -webkit-align-items: center;
+            align-items: center;
+            background-color: #ffffff;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            color: #333;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            height: 64px;
+            -webkit-justify-content: space-between;
+            justify-content: space-between;
+            padding: 0;
+            position: relative;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            /*max-width: 960px;*/
+            /*width: 100%;*/
+            z-index: 100;
+        }
+        .left-bar {
+            display: flex;
+            align-items: center;
+            justify-content: left;
+        }
+        .left-bar .menu {
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            padding-left: 64px;
+        }
+        .left-bar .menu li {
+            text-decoration:  none;
+            list-style: none;
+            padding-left: 32px;
+            font-size: 16px;
+        }
+        .left-bar .menu li a {
+            color: #333333;
+            text-decoration: none;
+        }
+        .left-bar .menu li a:hover {
+            color: #174ea6
+        }
+        .account-info {
+            display: flex;
+            overflow: hidden;
+            align-items: center;
+        }
+        .anchor {
+            background: none;
+            height: 14px;
+            width: 14px;
+            opacity: 1;
+        }
+        a.active {
+            color: #1a73e8 !important
+        }
+        .nav {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            height: 100%;
+            -webkit-box-shadow: inset -1px 0 0 0 #e6e6e6;
+            box-shadow: inset -1px 0 0 0 #e6e6e6;
+        }
+        .workspace_wrapper {
+            padding: 0 12px;
+        }
+        .workspace {
+            flex: 1;
+            background: #fff;
+            box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+        }
+        .workspace .table {
+            width: 100%;
+        }
+    </style>
+
+</body>
 </html>
