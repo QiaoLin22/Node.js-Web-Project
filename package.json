@@ -1,0 +1,27 @@
+{
+  "name": "dooleyeats",
+  "version": "1.0.0",
+  "description": "dooleyEats Oct",
+  "main": " app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QiaoLin22/QiaoLin22.github.io.git"
+  },
+  "keywords": [
+    "Emory",
+    "Foodie"
+  ],
+  "author": "Elaine Dong, Kyle Wu, Lin Qiao, Yayu Zhu, Yuhang Feng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/QiaoLin22/QiaoLin22.github.io/issues"
+  },
+  "homepage": "https://github.com/QiaoLin22/QiaoLin22.github.io#readme",
+  "dependencies": {
+    "ejs": "^2.7.1",
+    "express": "^4.17.1"
+  }
+}
