@@ -19,7 +19,7 @@ app.get("/register", function(req, res){
 
 });
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
 /*
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("The DooleyEats Server has Started");
