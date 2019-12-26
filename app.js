@@ -1,27 +1,77 @@
-var express = require("express");
-var app = express();
+const express = require("express"), 
+      app = express();
 
+const multer = require('multer');
+const ejs = require('ejs');
+const path = require('path');
+
+const expressLayouts = require("express-ejs-layouts");
+const mongoose = require("mongoose");
+const flash = require("connect-flash");
+const session = require("express-session");
+const passport = require("passport");
+const bodyParser = require("body-parser");
+const methodOverride = require("method-override");
+
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(express.static(__dirname + '/public'));
+app.use(methodOverride("_method"));
+// Passport config
+require("./config/passport")(passport);
+
+// DB Config
+const db = require("./config/keys").mongoURI;
+
+// Connect to Mongo
+mongoose
+  .connect(db, { 
+    useUnifiedTopology: true, 
+    useNewUrlParser: true, 
+    useFindAndModify: false})
+  .then(() => console.log("MongoDB Connected..."))
+  .catch(err => console.log(err));
+
+// EJS
+app.use(expressLayouts);
 app.set("view engine", "ejs");
 
-app.get("/", function(req, res){
-    res.render("homepage");
+// Bodyparser
+app.use(express.urlencoded({ extended: false }));
+
+// Express Session
+app.use(
+  session({
+    secret: "secret",
+    resave: true,
+    saveUninitialized: true
+  })
+);
+
+// Passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
+// Connect flash
+app.use(flash());
+
+//Global Vars for success & error message
+//also added currUser
+app.use((req, res, next) => {
+  res.locals.currUser = req.user;
+  res.locals.success_msg = req.flash("success_msg");
+  res.locals.error_msg = req.flash("error_msg");
+  res.locals.error = req.flash("error");
+  next();
 });
 
-app.get("/main", function(req, res){
-    var posts = [
-        {title: "Wagaya Japanese Restaurant!", image:"../login/static/image/Cherry.png", tags:"restaurants"},
-        {title: "Tanaka", image:"../login/static/image/Cherry.png", tags:"restaurants"},
-    ]
-    res.render("main");
-});
+// Routes
+app.use("/", require("./routes/index"));
+app.use("/users", require("./routes/users"));
+app.use("/posts", require("./routes/posts"));
+app.use("/posts/:id/comments", require("./routes/comments"));
 
-app.get("/register", function(req, res){
+const PORT = process.env.PORT || 5000;
 
-});
-
-app.listen(process.env.PORT || 3000);
-/*
-app.listen(process.env.PORT, process.env.IP, function(){
-    console.log("The DooleyEats Server has Started");
-});
-*/
+app.listen(PORT, console.log(`Server started on port ${PORT}`));
