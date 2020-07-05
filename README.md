@@ -1,4 +1,4 @@
-# Dooley Eats Web App Built with Node.js, Express, MongoDB & Passport Login
+# Dooley Eats Full Stack Food Review Web App Built with Node.js, Express, MongoDB & Passport Login
 
 This is a user login and registration app using Node.js, Express, Passport, Mongoose, EJS and some other packages.
 
